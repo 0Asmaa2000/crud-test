@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1 class="text-center position-relative my-5">Bookmarker</h1>
+
+        <div class=" text mt-5 d-flex justify-content-center align-items-center">
+            <div class="text-group d-flex align-items-center  mt-4">
+                <i class="fa-solid fa-bookmark fa-lg fs-4 m-2"></i>
+                <p class=" my-1 d-block "> Bookmark your favorite sites</p>
+                <i class="fa-solid fa-bookmark fa-lg fs-4 m-2"></i>
+            </div>
+           
+        </div>
+        <div class="mt-4 p-3">
+            <label for="BookName " class="form-label"><i class="fa-solid fa-book-bookmark p-1 text-black"></i><span
+                    class="fw-bolder"> Site Name</span></label>
+            <input type="text" oninput="ValidationName() " class="form-control " id="BookName"
+                placeholder="Bookmark Name">
+        </div>
+        <div class="mt-1 p-3">
+            <label for="exampleFormControlInput2 " class="form-label"><i class="fa-solid fa-link p-1"></i><span
+                    class="fw-bolder">Site URL</span></label>
+            <input type="url" oninput=" ValidationNameurl()  " class="form-control " id="BookUrL"
+                placeholder="Website Url">
+        </div>
+        <div class="button  d-flex justify-content-center a"><button onclick="AddBOokMark()"
+                class="btn  text-white ">Submit</button></div>
+    </div>
+    <br>
+    <div class="container dott">
+        <table class="table text-center mt-4">
+            <thead>
+                <th class="th m-1">Index</th>
+                <th class="th m-1">Website Name</th>
+                <th class="th m-1">Visit</th>
+                <th class="th m-1">Delete</th>
+            </thead>
+            <tbody id="RowDaTa">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="msgg bg-light d-none d-block p-lg-3 p-sm-4 position-absolute" id="msgalert">
+        <div class="x d-flex p-md-2  justify-content-between align-items-center">
+            <div class="groupDivs ">
+                <div class="red d-inline-block"></div>
+                <div class="Yellow d-inline-block"></div>
+                <div class="green d-inline-block"></div>
+            </div>
+            <button id="btn" class=" btx border-0 fs-4 fw-bolder" onclick="deletediv()" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <p class=" fs-4 text-black ">Site Name or Url is not valid, Please follow the rules below :</p>
+        <p class=" fs-5"><span><i class="fa-regular text-danger fa-circle-right mx-3 fs-5"></i></span >Site name must contain at least 3 characters</p>
+        <p class=" fs-5"><span><i class="fa-regular text-danger fa-circle-right mx-3 fs-5"></i></span>Site URL must be a valid one</p>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
